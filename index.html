@@ -372,19 +372,6 @@
     const channelName = document.querySelector('.channel-name');
     channelName.style.textShadow = '0 0 10px rgba(255,0,0,0.7)';
     
-    // Add pop animation to channel name
-    const popAnimation = () => {
-      channelName.animate([
-        { transform: 'scale(1)', textShadow: '0 0 10px rgba(255,0,0,0.7)' },
-        { transform: 'scale(1.05)', textShadow: '0 0 15px rgba(255,0,0,0.9)' },
-        { transform: 'scale(1)', textShadow: '0 0 10px rgba(255,0,0,0.7)' }
-      ], {
-        duration: 2000,
-        iterations: Infinity,
-        easing: 'ease-in-out'
-      });
-    };
-    
     popAnimation();
   </script>
 </body>
