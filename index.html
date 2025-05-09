@@ -11,7 +11,7 @@
       font-weight: normal;
       font-style: normal;
     }
-    
+
     :root {
       --bg-color: #0a0a0a;
       --bg-secondary: #151515;
@@ -21,28 +21,27 @@
       --border-radius: 16px;
       --transition-speed: 0.3s;
     }
-    
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Distant Galaxie', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    
+
     body {
       background-color: var(--bg-color);
       color: var(--text-color);
       overflow-x: hidden;
       min-height: 100vh;
     }
-    
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
     }
-    
-    /* Header/Hero Section */
+
     .hero {
       display: flex;
       flex-direction: column;
@@ -52,7 +51,7 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     .hero::before {
       content: '';
       position: absolute;
@@ -63,7 +62,7 @@
       animation: pulse 6s infinite;
       z-index: 0;
     }
-    
+
     .profile-section {
       display: flex;
       flex-direction: column;
@@ -81,64 +80,7 @@
       position: relative;
       overflow: hidden;
     }
-    
-    .profile-container {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      margin-bottom: 30px;
-    }
-    
-    .channel-avatar {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      overflow: hidden;
-      position: relative;
-      margin-right: 20px;
-    }
 
-    .avatar-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    
-    .avatar-placeholder {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      font-weight: bold;
-      color: white;
-    }
-    
-    .channel-info {
-      flex: 1;
-    }
-    
-    .channel-name {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    
-    .channel-stats {
-      color: var(--secondary-text);
-      font-size: 14px;
-    }
-    
-    /* Enhanced shadow for profile section */
-    .profile-section {
-      box-shadow: 0 12px 42px rgba(255, 0, 0, 0.15), 0 4px 23px rgba(0, 0, 0, 0.5);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    /* Add glowing border effect */
     .profile-section::after {
       content: '';
       position: absolute;
@@ -152,7 +94,45 @@
       pointer-events: none;
       animation: glow 3s ease-in-out infinite;
     }
-    
+
+    .profile-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .channel-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 20px;
+    }
+
+    .avatar-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .channel-info {
+      flex: 1;
+    }
+
+    .channel-name {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      text-shadow: 0 0 10px rgba(255,0,0,0.7);
+    }
+
+    .channel-stats {
+      color: var(--secondary-text);
+      font-size: 14px;
+    }
+
     .subscribe-button {
       background-color: var(--accent-color);
       color: white;
@@ -169,80 +149,39 @@
       justify-content: center;
       width: 100%;
       max-width: 200px;
-      text-decoration: none; /* Remove underline */
+      text-decoration: none;
     }
-    
+
     .subscribe-button:hover {
       transform: scale(1.05);
       box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
     }
-    
-    /* Animations */
+
     @keyframes pulse {
-      0% {
-        transform: scale(1);
-        opacity: 0.3;
-      }
-      50% {
-        transform: scale(1.3);
-        opacity: 0.1;
-      }
-      100% {
-        transform: scale(1);
-        opacity: 0.3;
-      }
+      0% { transform: scale(1); opacity: 0.3; }
+      50% { transform: scale(1.3); opacity: 0.1; }
+      100% { transform: scale(1); opacity: 0.3; }
     }
-    
+
     @keyframes glow {
-      0% {
-        box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
-      }
-      50% {
-        box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
-      }
-      100% {
-        box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
-      }
+      0% { box-shadow: 0 0 10px rgba(255, 0, 0, 0.2); }
+      50% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.4); }
+      100% { box-shadow: 0 0 10px rgba(255, 0, 0, 0.2); }
     }
-    
-    @keyframes rotate-bg {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-    
-    @keyframes shimmer {
-      0% {
-        background-position: -100% 0;
-      }
-      100% {
-        background-position: 100% 0;
-      }
-    }
-    
+
     @keyframes fadeUp {
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
-    
+
     @keyframes float {
-      0% {
-        transform: translateY(0px);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-      100% {
-        transform: translateY(0px);
-      }
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
     }
-    
-    /* Floating particles background */
+
     .particles {
       position: absolute;
       top: 0;
@@ -252,21 +191,20 @@
       overflow: hidden;
       z-index: 0;
     }
-    
+
     .particle {
       position: absolute;
       background-color: rgba(255, 0, 0, 0.2);
       border-radius: 50%;
       pointer-events: none;
     }
-    
-    /* Responsive design */
+
     @media (max-width: 768px) {
       .profile-container {
         flex-direction: column;
         text-align: center;
       }
-      
+
       .channel-avatar {
         margin-right: 0;
         margin-bottom: 20px;
@@ -281,104 +219,43 @@
       <div class="profile-section">
         <div class="profile-container">
           <div class="channel-avatar">
-            <div class="avatar-placeholder">CT</div>
+            <img src="pb.png" alt="Profilbild" class="avatar-image">
           </div>
           <div class="channel-info">
             <h1 class="channel-name">ChaosTastisch</h1>
             <p class="channel-stats">@ChaosTastischYT</p>
           </div>
         </div>
-
         <a href="https://www.youtube.com/@ChaosTastischYT?sub_confirmation=1" class="subscribe-button" id="subscribe-btn" target="_blank">SUBSCRIBE</a>
       </div>
     </section>
   </div>
 
   <script>
-    // Create floating particles effect
     const particlesContainer = document.getElementById('particles');
     const particleCount = 30;
-    
+
     for (let i = 0; i < particleCount; i++) {
       const particle = document.createElement('div');
       particle.classList.add('particle');
-      
-      // Random size between 3px and 8px
+
       const size = Math.random() * 5 + 3;
       particle.style.width = `${size}px`;
       particle.style.height = `${size}px`;
-      
-      // Random position
+
       const xPos = Math.random() * 100;
       const yPos = Math.random() * 100;
       particle.style.left = `${xPos}%`;
       particle.style.top = `${yPos}%`;
-      
-      // Random opacity
+
       particle.style.opacity = Math.random() * 0.5 + 0.1;
-      
-      // Animation
+
       const duration = Math.random() * 20 + 10;
       const delay = Math.random() * 5;
       particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
-      
+
       particlesContainer.appendChild(particle);
     }
-    
-    // Subscribe button hover effect
-    const subscribeButton = document.getElementById('subscribe-btn');
-    
-    subscribeButton.addEventListener('mouseover', () => {
-      subscribeButton.style.transform = 'scale(1.05)';
-      subscribeButton.style.boxShadow = '0 0 15px rgba(255, 0, 0, 0.6)';
-    });
-    
-    subscribeButton.addEventListener('mouseout', () => {
-      subscribeButton.style.transform = '';
-      subscribeButton.style.boxShadow = '';
-    });
-    
-    // Create avatar animation
-    const avatarPlaceholder = document.querySelector('.avatar-placeholder');
-    
-    // Enhanced avatar effect
-    avatarPlaceholder.style.background = 'linear-gradient(45deg, #ff0000, #990000)';
-    avatarPlaceholder.style.boxShadow = 'inset 0 0 15px rgba(0,0,0,0.5), 0 0 10px rgba(255,0,0,0.3)';
-    
-    // Create pulsing effect for avatar
-    const pulseAvatar = () => {
-      avatarPlaceholder.animate([
-        { boxShadow: 'inset 0 0 15px rgba(0,0,0,0.5), 0 0 10px rgba(255,0,0,0.3)' },
-        { boxShadow: 'inset 0 0 15px rgba(0,0,0,0.5), 0 0 25px rgba(255,0,0,0.6)' },
-        { boxShadow: 'inset 0 0 15px rgba(0,0,0,0.5), 0 0 10px rgba(255,0,0,0.3)' }
-      ], {
-        duration: 2000,
-        iterations: Infinity
-      });
-    };
-    
-    pulseAvatar();
-    
-    // Add animated background effect
-    const profileSection = document.querySelector('.profile-section');
-    
-    // Create animated background element
-    const animatedBg = document.createElement('div');
-    animatedBg.style.position = 'absolute';
-    animatedBg.style.top = '-50%';
-    animatedBg.style.left = '-50%';
-    animatedBg.style.width = '200%';
-    animatedBg.style.height = '200%';
-    animatedBg.style.background = 'radial-gradient(circle, rgba(255,0,0,0.05) 0%, rgba(0,0,0,0) 70%)';
-    animatedBg.style.zIndex = '-1';
-    animatedBg.style.animation = 'rotate-bg 30s linear infinite';
-    profileSection.prepend(animatedBg);
-    
-    // Add pop effect to channel name
-    const channelName = document.querySelector('.channel-name');
-    channelName.style.textShadow = '0 0 10px rgba(255,0,0,0.7)';
-    
-    popAnimation();
   </script>
 </body>
 </html>
